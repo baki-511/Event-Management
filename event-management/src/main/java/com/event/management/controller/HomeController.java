@@ -16,4 +16,15 @@ public class HomeController {
     public String aboutUs() {
         return "/pages/about";
     }
+    
+    @GetMapping("/testimonial")
+    public String testimonial() {
+        return "/pages/testimonial";
+    }
+    
+    @GetMapping("/contact")
+    public String contactUs() {
+        return "/pages/contact";
+    }
+    
 }

@@ -670,6 +670,7 @@ header.shadow {
 .testimonial-carousel-wrap{
     text-align: center;
     position: relative;
+    margin-top: 150px;
 }
 
 .listing-carousel-button {
