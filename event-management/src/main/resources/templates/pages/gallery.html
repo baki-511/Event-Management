@@ -8,23 +8,35 @@
     <title>Event Management</title>
     <!--    Common Css-->
     <div th:replace="~{common :: common(~{::link})}"></div>
+    <link rel="stylesheet" th:href="@{/user/css/lightbox.min.css}" />
+
+    <style>
+        .gallery-container{
+           width: 90%;
+           margin: auto;
+        }
+        .image-gallery{
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          justify-content: center;
+          grid-gap: 5px;
+          grid-row-gap: 0px;
+          margin-top: 150px;
+        }
+
+        .image-gallery img{
+          width: 100%;
+        }
+
+    </style>
 </head>
 <body>
 
 <!--Header Section -->
 <div th:replace="~{components/header :: header}"></div>
 
-<!-- Banner Section -->
-<div th:replace="~{components/home :: home}"></div>
-
 <!-- About Section -->
-<div th:replace="~{components/about :: about}"></div>
-
-<!-- About Section -->
-<div th:replace="~{components/control :: control}"></div>
-
-<!-- Testimonial Section -->
-<div th:replace="~{components/testimonial :: testimonial}"></div>
+<div th:replace="~{components/gallery :: gallery}"></div>
 
 <!-- Footer Section -->
 <div th:replace="~{components/footer :: footer}"></div>
@@ -33,13 +45,9 @@
 <!-- Footer Section End -->
 
 
-
-
+<script th:src="@{/user/js/lightbox-plus-jquery.min.js}"></script>
 <!-- Common Js -->
 <div th:replace="~{common :: common_js(~{::script})}"></div>
-<script th:src=@{/user/js/testimonial.js}></script>
 
-
-<script th:src="@{/user/js/banner.js}"></script>
 </body>
 </html>

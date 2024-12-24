@@ -27,4 +27,9 @@ public class HomeController {
         return "/pages/contact";
     }
     
+    @GetMapping("/gallery")
+    public String gallery() {
+        return "/pages/gallery";
+    }
+    
 }
