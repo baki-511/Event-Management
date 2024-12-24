@@ -7,25 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event Management</title>
     <!--    Common Css-->
-    <div th:replace="~{admin/common :: common(~{::link})}"></div>
+    <div th:replace="~{common :: common(~{::link})}"></div>
 </head>
 <body>
-<input type="checkbox" id="sidebar-toggle">
-<!--Sidebar -->
-<div th:replace="~{admin/components/sidebar :: sidebar}"></div>
+
+<!--Header Section -->
+<div th:replace="~{components/header :: header}"></div>
+
+<!-- Banner Section -->
+<div th:replace="~{components/home :: home}"></div>
+
+<!-- About Section -->
+<div th:replace="~{components/about :: about}"></div>
+
+<!-- About Section -->
+<div th:replace="~{components/control :: control}"></div>
+
+<!-- Footer Section -->
+<div th:replace="~{components/footer :: footer}"></div>
+
+<div th:replace="~{components/footer :: footer-cpy}"></div>
+<!-- Footer Section End -->
 
 
-<!--Main Content -->
-<div class="main-content">
-    <header th:replace="~{admin/components/header :: header}"></header>
-    <main>
-        
-<!--        <div th:replace="~{admin/components/dashboard :: dashboard}"></div>-->
-    </main>
-</div>
 
 
-<!--Common Js-->
-<div th:replace="~{admin/common :: common_js(~{::script})}"></div>
+<!-- Common Js -->
+<div th:replace="~{common :: common_js(~{::script})}"></div>
+
+<script th:src="@{/user/js/banner.js}"></script>
 </body>
 </html>
