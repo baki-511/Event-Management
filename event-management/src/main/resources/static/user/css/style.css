@@ -991,7 +991,7 @@ header.shadow {
 /* Footer  */
 .footer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 4rem !important;
     padding-bottom: 20px;
@@ -1028,6 +1028,17 @@ header.shadow {
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--main-color);
+}
+
+.footer-box ul li{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-box ul li i{
+    font-size: 18px;
 }
 
 .social {
