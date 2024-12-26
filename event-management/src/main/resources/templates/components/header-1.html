@@ -28,9 +28,8 @@
             </li>
             <li>
                 <a href="">Service    +</a>
-                <ul th:each="service: ${serviceList}">
-                    <li><a href="" th:text="${service.title}"></a></li>
-
+                <ul >
+                    <li th:each="service: ${serviceList}"><a th:href="@{'/service/' + ${service.serviceId}}" th:text="${service.title}"></a></li>
                 </ul>
             </li>
             <li>

@@ -27,6 +27,7 @@ public class AdminServiceController {
     public String addServices(@ModelAttribute Services services,
                               @RequestParam("imageFile") MultipartFile imageFile,
                               Model model) {
+        System.out.println(services);
         servicesService.addService(services, imageFile);
         return "redirect:/admin/services/all";
     }

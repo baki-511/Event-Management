@@ -9,6 +9,7 @@ public class Services {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long serviceId;
     private String title;
+    @Column(length = 2000)
     private String description;
     
     @Lob
@@ -64,8 +65,7 @@ public class Services {
         return "Services{" +
                 "serviceId=" + serviceId +
                 ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", image='" + image + '\'' +
+                ", description='" + description + '\''+
                 '}';
     }
 }
