@@ -43,7 +43,7 @@ li {
 
 body {
     color: var(--text-color);
-    background: var(--body-color);
+    background: var(--container-color);
 }
 
 .container {

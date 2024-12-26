@@ -17,6 +17,7 @@ public class ServiceController {
     
     @GetMapping("/{serviceId}")
     public String getContactUs(@PathVariable Long serviceId, Model model) {
+        model.addAttribute("serviceList", servicesService.getAllServices());
         model.addAttribute("service", servicesService.getServiceById(serviceId));
         return "/pages/service";
     }

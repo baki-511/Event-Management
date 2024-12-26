@@ -18,6 +18,11 @@ public class HomeController {
         return "index";
     }
     
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+    
     @GetMapping("/about")
     public String aboutUs(Model model) {
         model.addAttribute("serviceList", servicesService.getAllServices());
