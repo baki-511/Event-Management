@@ -9,6 +9,8 @@
     <!--    Common Css-->
     <div th:replace="~{common :: common(~{::link})}"></div>
     <link rel="stylesheet" th:href="@{/user/css/lightbox.min.css}" />
+    <link rel="stylesheet" th:href="@{/user/css/header.css}">
+
 
     <style>
         .gallery-container{
@@ -33,7 +35,7 @@
 <body>
 
 <!--Header Section -->
-<div th:replace="~{components/header :: header}"></div>
+<div th:replace="~{components/header-1 :: header}"></div>
 
 <!-- About Section -->
 <div th:replace="~{components/gallery :: gallery}"></div>

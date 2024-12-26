@@ -61,26 +61,26 @@
 
         <!-- right section -->
         <div class="col right">
-            <form action="" class="message-form">
+            <form th:action="@{/contact/save}" method="post" class="message-form">
                 <div class="input-group half-width">
-                    <input type="text" name="" required />
-                    <label for="">Your Name</label>
+                    <input type="text" name="name" id="name" required />
+                    <label for="name">Your Name</label>
                 </div>
                 <div class="input-group half-width">
-                    <input type="email" name="" required />
-                    <label for="">E-mail</label>
+                    <input type="email" name="email" id="email" required />
+                    <label for="email">E-mail</label>
                 </div>
                 <div class="input-group full-width">
-                    <input type="text" name="" required />
-                    <label for="">Address</label>
+                    <input type="text" name="venue" id="venue" required />
+                    <label for="venue">Address</label>
                 </div>
                 <div class="input-group full-width">
-                    <textarea name="" id="" required></textarea>
-                    <label for="">Message</label>
+                    <textarea name="message" id="message" required></textarea>
+                    <label for="message">Message</label>
                 </div>
 
                 <div class="input-group full-width">
-                    <button>Send Message</button>
+                    <button type="submit" class="contact-btn">Send Message</button>
                 </div>
             </form>
         </div>

@@ -8,11 +8,13 @@
     <title>Event Management</title>
     <!--    Common Css-->
     <div th:replace="~{common :: common(~{::link})}"></div>
+    <link rel="stylesheet" th:href="@{/user/css/header.css}">
+
 </head>
 <body>
 
 <!--Header Section -->
-<div th:replace="~{components/header :: header}"></div>
+<div th:replace="~{components/header-1 :: header}"></div>
 
 <!-- Banner Section -->
 <div th:replace="~{components/home :: home}"></div>
@@ -25,6 +27,9 @@
 
 <!-- Testimonial Section -->
 <div th:replace="~{components/testimonial :: testimonial}"></div>
+
+<!-- Contact Us Section -->
+<div th:replace="~{components/contact :: contact}"></div>
 
 <!-- Footer Section -->
 <div th:replace="~{components/footer :: footer}"></div>
