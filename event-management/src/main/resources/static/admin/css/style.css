@@ -224,3 +224,8 @@ main {
     cursor: pointer;
 }
 
+.desc{
+    min-width: 500px;
+    min-height: 300px;
+    overflow: auto;
+}

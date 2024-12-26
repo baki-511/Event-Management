@@ -111,6 +111,10 @@
     .row .content-wrapper p{
         line-height: 24px;
     }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 750px) {
@@ -130,9 +134,9 @@
         font-size: 0.875rem;
     }
 
-    .footer {
+    /* .footer {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 }
 
 @media (max-width: 575px) {
