@@ -8,6 +8,8 @@
     <title>Event Management</title>
     <!--    Common Css-->
     <div th:replace="~{common :: common(~{::link})}"></div>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <link rel="stylesheet" th:href="@{/user/css/header.css}">
     <link rel="stylesheet" th:href="@{/user/css/service-slider.css}">
 </head>
@@ -16,53 +18,18 @@
 <!--Header Section -->
 <div th:replace="~{components/header-1 :: header}"></div>
 
-<!-- Banner Section -->
-<div th:replace="~{components/home :: home}"></div>
-
 <!-- About Section -->
-<div class="heading-title">
-    <p>About Section</p>
-    <h3>About Our Company</h3>
-</div>
 <div th:replace="~{components/about :: about}"></div>
-
-<!-- Service Slide Section -->
-<div class="heading-title">
-    <p>What We Offer</p>
-    <h3>Our Services</h3>
-</div>
-<div th:replace="~{components/service-slide :: service-slide}"></div>
-
-<!-- About Section -->
-<!--<div th:replace="~{components/control :: control}"></div>-->
-
-<!-- Testimonial Section -->
-<div class="heading-title">
-    <p>Testimonial Section</p>
-    <h3>Our Clients Feedbacks</h3>
-</div>
-<div th:replace="~{components/testimonial :: testimonial}"></div>
-
-<!-- Contact Us Section -->
-<div class="heading-title">
-    <p>Contact Section</p>
-    <h3>Get In Touch</h3>
-</div>
-<div th:replace="~{components/contact :: contact}"></div>
 
 <!-- Footer Section -->
 <div th:replace="~{components/footer :: footer}"></div>
-
 <div th:replace="~{components/footer :: footer-cpy}"></div>
 <!-- Footer Section End -->
 
 
-
-
 <!-- Common Js -->
 <div th:replace="~{common :: common_js(~{::script})}"></div>
-<script th:src=@{/user/js/testimonial.js}></script>
-<script th:src="@{/user/js/banner.js}"></script>
+
 <script th:src="@{/user/js/service-slider.js}"></script>
 </body>
 </html>

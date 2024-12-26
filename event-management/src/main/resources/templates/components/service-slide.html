@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Service Slide Section  -->
+<div class="service-slide-container" th:fragment="service-slide">
+    <div class="slide-container swiper" >
+        <div class="slide-card-wrapper">
+            <ul class="slide-card-list swiper-wrapper">
+                <li class="slide-card-item swiper-slide" th:each="slide : ${serviceSlides}">
+                    <a th:href="@{'/service/'+${slide.serviceId}}" class="slide-card-link">
+                        <img th:src="|data:image/jpeg;base64,${slide.image}|" alt="" class="slide-card-img" />
+                        <h2 class="slide-card-title" th:text="${slide.title}">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab.
+                        </h2>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

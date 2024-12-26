@@ -20,6 +20,7 @@ public class HomeController {
     public String home(Model model) {
         model.addAttribute("serviceList", servicesService.getAllServices());
         model.addAttribute("testimonials", testimonialService.getAllTestimonial());
+        model.addAttribute("serviceSlides", servicesService.getAllServices());
         return "index";
     }
     
