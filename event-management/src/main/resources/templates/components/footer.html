@@ -10,45 +10,63 @@
 <body>
 
 <!-- Footer Section Start -->
-<div class="footer container" th:fragment="footer">
-    <div class="footer-box">
-        <a href="" class="footer-logo">Event <span>Management</span></a>
-        <div class="social">
-            <a href=""><i class="bx bxl-facebook-circle"></i></a>
-            <a href=""><i class="bx bxl-youtube"></i></a>
-            <a href=""><i class="bx bxl-instagram"></i></a>
+<div class="main-footer" th:fragment="main-footer">
+    <div class="footer container" th:fragment="footer">
+        <div class="footer-box">
+            <a href="" class="footer-logo">Event <span>Management</span></a>
+            <div class="social">
+                <a href=""><i class="bx bxl-facebook-circle"></i></a>
+                <a href=""><i class="bx bxl-youtube"></i></a>
+                <a href=""><i class="bx bxl-instagram"></i></a>
+            </div>
         </div>
-    </div>
-    <div class="footer-box">
-        <h2>Our Services</h2>
-        <a href="">About</a>
-        <a href="">Service</a>
-        <a href="">Testimonial</a>
-    </div>
-    <div class="footer-box">
-        <h2>Contact Us</h2>
-        <ul>
-            <li>
-                <i class="fa-solid fa-envelope" style="font-size:18px; margin-right:5px"></i>
-                <a href="mailto:abc_company@gmail.com">abc_company@gmail.com</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-phone" style="font-size:18px; margin-right:5px"></i>
-                <a href="tel:+919322276051"> Phone: +91 9322276051</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-location-dot" style="font-size:18px; margin-right:5px"> </i>
-                <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maiores </a>
-            </li>
-        </ul>
+        <div class="footer-box">
+            <h2>Our Services</h2>
+            <ul>
+                <li>
+                    <a th:href="@{/}" class="nav-link">Home</a>
+                </li>
 
+                <li>
+                    <a th:href="@{/about}" class="nav-link">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Service     </a>
+                </li>
+                <li>
+                    <a th:href="@{/gallery}" class="nav-link">Gallery</a>
+                </li>
+                <li>
+                    <a th:href="@{/testimonial}" class="nav-link">Testimonial</a>
+                </li>
+                <li>
+                    <a th:href="@{/contact}" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-envelope" style="font-size:18px; margin-right:5px"></i>
+                    <a href="mailto:abc_company@gmail.com">abc_company@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone" style="font-size:18px; margin-right:5px"></i>
+                    <a href="tel:+9194000555"> Phone: +91 94000555</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot" style="font-size:18px; margin-right:5px"> </i>
+                    <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maiores </a>
+                </li>
+            </ul>
+
+        </div>
 
     </div>
-
+    <div class="copyright container" th:fragment="footer-cpy">
+        <p>&#169; Event Management All righ reserved</p>
+    </div>
 </div>
-<div class="copyright container" th:fragment="footer-cpy">
-    <p>&#169; Event Management All righ reserved</p>
-</div>
-
 </body>
 </html>
