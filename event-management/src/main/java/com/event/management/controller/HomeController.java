@@ -1,6 +1,7 @@
 package com.event.management.controller;
 
 import com.event.management.service.ServicesService;
+import com.event.management.service.TestimonialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,10 +12,14 @@ public class HomeController {
     @Autowired
     private ServicesService servicesService;
     
+    @Autowired
+    private TestimonialService testimonialService;
+    
     
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("serviceList", servicesService.getAllServices());
+        model.addAttribute("testimonials", testimonialService.getAllTestimonial());
         return "index";
     }
     
@@ -32,6 +37,7 @@ public class HomeController {
     @GetMapping("/testimonial")
     public String testimonial(Model model) {
         model.addAttribute("serviceList", servicesService.getAllServices());
+        model.addAttribute("testimonials", testimonialService.getAllTestimonial());
         return "/pages/testimonial";
     }
     

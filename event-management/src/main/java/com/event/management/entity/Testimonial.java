@@ -9,6 +9,7 @@ public class Testimonial {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long testimonialId;
     private String title;
+    @Column(length = 1000)
     private String description;
     
     @Lob
