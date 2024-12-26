@@ -238,6 +238,60 @@ header.shadow {
     padding-bottom: 25px;
 }
 
+/* Section heading & Link Start  */
+.section-head {
+    width: 100%;
+    height: 300px;
+    /* background-color: #232d7d; */
+    background: url('/user/img/event1.jpg');
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-head::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section-head h3 {
+    position: relative;
+    font-size: 38px;
+    z-index: 2;
+}
+
+.section-head a {
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    z-index: 2;
+}
+
+.section-head .link-sect {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+
+
+
+/* Section heading & Link End */
+
 
 /* Drop Menu Start  */
 .drop-menu a {
@@ -1030,14 +1084,14 @@ header.shadow {
     color: var(--main-color);
 }
 
-.footer-box ul li{
+.footer-box ul li {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 5px;
 }
 
-.footer-box ul li i{
+.footer-box ul li i {
     font-size: 18px;
 }
 
