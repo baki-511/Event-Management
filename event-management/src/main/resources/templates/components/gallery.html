@@ -10,30 +10,22 @@
 <body>
 <div class="gallery-container"  th:fragment="gallery">
     <div class="image-gallery">
-        <a href="/user/img/img-1.jpg" data-lightbox="roadtrip" data-title=" First Image">
-            <img src="/user/img/img-1.jpg" alt="" />
+        <a th:href="|data:image/jpeg;base64,${gallery.image}|" data-lightbox="roadtrip" data-title=" First Image"
+           th:each="gallery : ${galleryImages}">
+            <img th:src="|data:image/jpeg;base64,${gallery.image}|" alt="" />
         </a>
-        <a href="/user/img/img-2.jpg" data-lightbox="roadtrip" data-title=" Second Image">
-            <img src="/user/img/img-2.jpg" alt="" />
+    </div>
+</div>
+
+<div class="gallery-container"  th:fragment="gallery2">
+    <div class="image-gallery">
+        <a th:href="|data:image/jpeg;base64,${gallery.image}|" data-lightbox="roadtrip" data-title=" First Image"
+           th:each="gallery : ${fourGallery}">
+            <img th:src="|data:image/jpeg;base64,${gallery.image}|" alt="" />
         </a>
-        <a href="/user/img/img-3.jpg" data-lightbox="roadtrip" data-title=" Third Image">
-            <img src="/user/img/img-3.jpg" alt="" />
-        </a>
-        <a href="/user/img/img-4.jpg" data-lightbox="roadtrip" data-title=" Four Image">
-            <img src="/user/img/img-4.jpg" alt="" />
-        </a>
-        <a href="/user/img/img-5.jpg" data-lightbox="roadtrip" data-title=" Five Image">
-            <img src="/user/img/img-5.jpg" alt="" />
-        </a>
-        <a href="/user/img/img-6.jpg" data-lightbox="roadtrip" data-title=" Six Image">
-            <img src="/user/img/img-6.jpg" alt="" />
-        </a>
-        <a href="/user/img/img-7.jpg" data-lightbox="roadtrip" data-title=" Seven Image">
-            <img src="/user/img/img-7.jpg" alt="" />
-        </a>
-        <a href="/user/img/img-8.jpg" data-lightbox="roadtrip" data-title=" Eight Image">
-            <img src="/user/img/img-8.jpg" alt="" />
-        </a>
+    </div>
+    <div class="gallery-btn">
+        <button><a th:href="@{/gallery}">View More</a></button>
     </div>
 </div>
 </body>

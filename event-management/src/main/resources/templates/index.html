@@ -10,6 +10,55 @@
     <div th:replace="~{common :: common(~{::link})}"></div>
     <link rel="stylesheet" th:href="@{/user/css/header.css}">
     <link rel="stylesheet" th:href="@{/user/css/service-slider.css}">
+
+    <style>
+        .gallery-container{
+           width: 90%;
+           margin: auto;
+          margin-bottom: 70px;
+
+        }
+        .image-gallery{
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+          justify-content: center;
+          grid-gap: 5px;
+          grid-row-gap: 0px;
+          margin-top: 70px;
+        }
+
+        .image-gallery img{
+          width: 100%;
+        }
+
+        .gallery-container button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            background: rgb(193, 26, 26);
+            outline: none;
+            font-size: 20px;
+            margin: auto;
+        }
+
+        .gallery-container .gallery-btn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery-container button a{
+            color: #fff;
+        }
+
+        .gallery-container button:hover{
+            background: rgb(221, 28, 28);
+        }
+
+        .section-head{
+
+        }
+    </style>
 </head>
 <body>
 
@@ -32,6 +81,14 @@
     <h3>Our Services</h3>
 </div>
 <div th:replace="~{components/service-slide :: service-slide}"></div>
+
+
+<!-- Service Slide Section -->
+<div class="heading-title">
+    <p>Our Event Memories</p>
+    <h3>Our Gallery</h3>
+</div>
+<div th:replace="~{components/gallery :: gallery2}"></div>
 
 <!-- About Section -->
 <!--<div th:replace="~{components/control :: control}"></div>-->
