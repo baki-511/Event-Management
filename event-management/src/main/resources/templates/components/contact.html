@@ -9,80 +9,88 @@
 </head>
 <body>
 <!-- Contact Us Section start  -->
-<div class="contact-container" th:fragment="contact">
-    <div class="row">
-        <!-- left section -->
-        <div class="col left">
-            <div class="contact-title">
-                <h2>Get In Touch</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa,
-                    qui.
-                </p>
+<div class="main-contact-container"  th:fragment="contact">
+    <div class="contact-container">
+        <div class="row">
+            <!-- left section -->
+            <div class="col left">
+                <div class="contact-title">
+                    <h2>Get In Touch</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa,
+                        qui.
+                    </p>
+                </div>
+
+                <div class="contact-info">
+                    <div class="icon-group">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="details">
+                            <span>Phone</span>
+                            <span>+91 934329843</span>
+                        </div>
+                    </div>
+                    <div class="icon-group">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="details">
+                            <span>Email</span>
+                            <span>even.site@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="icon-group">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="details">
+                            <span>Location</span>
+                            <span>Gondhali Nagar, Pune</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
             </div>
 
-            <div class="contact-info">
-                <div class="icon-group">
-                    <div class="icon">
-                        <i class="fa-solid fa-phone"></i>
+            <!-- right section -->
+            <div class="col right">
+                <form th:action="@{/contact/save}" method="post" class="message-form">
+                    <div class="input-group half-width">
+                        <input type="text" name="name" id="name" required/>
+                        <label for="name">Your Name</label>
                     </div>
-                    <div class="details">
-                        <span>Phone</span>
-                        <span>+91 934329843</span>
+                    <div class="input-group half-width">
+                        <input type="email" name="email" id="email" required/>
+                        <label for="email">E-mail</label>
                     </div>
-                </div>
-                <div class="icon-group">
-                    <div class="icon">
-                        <i class="fa-solid fa-envelope"></i>
+                    <div class="input-group full-width">
+                        <input type="text" name="venue" id="venue" required/>
+                        <label for="venue">Address</label>
                     </div>
-                    <div class="details">
-                        <span>Email</span>
-                        <span>even.site@gmail.com</span>
+                    <div class="input-group full-width">
+                        <textarea name="message" id="message" required></textarea>
+                        <label for="message">Message</label>
                     </div>
-                </div>
-                <div class="icon-group">
-                    <div class="icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="details">
-                        <span>Location</span>
-                        <span>Gondhali Nagar, Pune</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="social-media">
-                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <div class="input-group full-width">
+                        <button type="submit" class="contact-btn">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
-
-        <!-- right section -->
-        <div class="col right">
-            <form th:action="@{/contact/save}" method="post" class="message-form">
-                <div class="input-group half-width">
-                    <input type="text" name="name" id="name" required />
-                    <label for="name">Your Name</label>
-                </div>
-                <div class="input-group half-width">
-                    <input type="email" name="email" id="email" required />
-                    <label for="email">E-mail</label>
-                </div>
-                <div class="input-group full-width">
-                    <input type="text" name="venue" id="venue" required />
-                    <label for="venue">Address</label>
-                </div>
-                <div class="input-group full-width">
-                    <textarea name="message" id="message" required></textarea>
-                    <label for="message">Message</label>
-                </div>
-
-                <div class="input-group full-width">
-                    <button type="submit" class="contact-btn">Send Message</button>
-                </div>
-            </form>
+    </div>
+    <div class="map_main" style="display: block;">
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France"
+                    width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
         </div>
     </div>
 </div>
